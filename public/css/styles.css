@@ -1,0 +1,137 @@
+body {
+    font-family: 'Rubik';
+}
+
+main {
+    min-height: 100vh;
+    width: auto;
+    background: #051937;
+    background-image: radial-gradient(circle, #051937, #1b3156, #314b78, #47679b, #5d84c0);
+    display: flex;
+    color: white
+
+}
+
+.carousel {
+    position: inherit;
+}
+
+.step-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    
+}
+
+#guide-steps {
+    min-height: 100%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+
+.carousel-item {
+    transition: transform 2000ms cubic-bezier(0.285, 0.005, 0.070, 1.000), opacity .5s ease-out;
+}
+.step-written {
+    max-width: 80%;
+    margin: auto;
+}
+
+.step-written > h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.step-written > p {
+    font-family: 'Work Sans'
+}
+
+.carousel-indicators {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .carousel-indicators button  {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    color: rgba(0,0,0,0.50);
+    text-indent: 0;
+    border: none;
+    line-height: 25px;
+    font-size: 0.66rem;
+    font-weight: bold; 
+}
+
+.yellow-shadow {
+    background-color: #000 !important;
+    color: #FFF !important
+    
+}
+.purple-shadow {
+    background-color: #691f69 !important;
+    color: #FFF !important
+}
+.green-shadow {
+    background-color: #68a063 !important;
+    color: #FFF !important
+}
+.blue-shadow {
+    background-color: #3860bb !important;
+    color: #FFF !important
+}
+
+.appear {
+    animation: appear 2000ms cubic-bezier(0.855, 0.000, 0.500, 0.985) 1ms 1 normal none;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 7%;
+}
+
+::marker {
+    content: "Paso " counter(list-item) ": ";
+}
+
+a, a:hover{
+    color: #00E2F2;
+}
+
+
+
+code {
+    font-family: 'Rubik';
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
